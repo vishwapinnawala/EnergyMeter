@@ -1,0 +1,13 @@
+
+
+.chart{
+  position: relative;
+  width: 30vw;
+  height: 30vh;
+    
+}
+
+.chartcontainer{
+align-items: center;
+  justify-content: center;
+}
