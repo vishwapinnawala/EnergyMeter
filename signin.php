@@ -1,7 +1,6 @@
 <?php
 session_start();
 require_once "config.php";
-
 ?>
 <?php
 
@@ -26,12 +25,13 @@ $pwd=$_POST["pwd"];
 
 	if($numRows  == 1){
 		$row = mysqli_fetch_assoc($rs);
-		$usertype=$row['type'];
+		//$usertype=$row['type'];
                 if($password==$row['password']){
             
             $_SESSION["username"] = $email;
             $_SESSION["email"] = $email;
-            $_SESSION['expire'] = $_SESSION['start'] + (720 * 60);  // 12 hour session window
+             $_SESSION['expire'] = time() + (30 * 60);
+            //$_SESSION["expire"] = $_SESSION["start"] + (720 * 60);  // 12 hour session window
 
 echo '<script>window.location.replace("checkusage.php")</script>';
 }

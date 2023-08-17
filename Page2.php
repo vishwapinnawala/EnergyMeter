@@ -6,146 +6,159 @@ require_once "config.php";
 <?php
 
 $year = idate("Y");
+$jan=0;
 $sql = "select checkusage($year,1)";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
   // output data of each row
   while($row = mysqli_fetch_assoc($result)) {
+  if($row["checkusage($year,1)"]==!0){
   $format_number1 = number_format($row["checkusage($year,1)"], 2);
-    $jan=$format_number1;
+    $jan=$format_number1;}
   }
 }
 
-
+$feb=0;
 $sql = "select checkusage($year,2)";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
   // output data of each row
   while($row = mysqli_fetch_assoc($result)) {
+  if($row["checkusage($year,2)"]==!0){
   $format_number1 = number_format($row["checkusage($year,2)"], 2);
-    $feb=$format_number1;
+    $feb=$format_number1;}
   }
 }
 
-
+$mar=0;
 $sql = "select checkusage($year,3)";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
   // output data of each row
   while($row = mysqli_fetch_assoc($result)) {
+  if($row["checkusage($year,3)"]==!0){
   $format_number1 = number_format($row["checkusage($year,3)"], 2);
-    $mar=$format_number1;
+    $mar=$format_number1;}
   }
 }
 
-
+$apr=0;
 $sql = "select checkusage($year,4)";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
   // output data of each row
   while($row = mysqli_fetch_assoc($result)) {
+  if($row["checkusage($year,4)"]==!0){
   $format_number1 = number_format($row["checkusage($year,4)"], 2);
-    $apr=$format_number1;
+    $apr=$format_number1;}
   }
 }
 
-
+$may=0;
 $sql = "select checkusage($year,5)";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
   // output data of each row
   while($row = mysqli_fetch_assoc($result)) {
+  if($row["checkusage($year,5)"]==!0){
   $format_number1 = number_format($row["checkusage($year,5)"], 2);
-    $may=$format_number1;
+    $may=$format_number1;}
   }
 }
 
-
+$jun=0;
 $sql = "select checkusage($year,6)";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
   // output data of each row
   while($row = mysqli_fetch_assoc($result)) {
+  if($row["checkusage($year,6)"]==!0){
   $format_number1 = number_format($row["checkusage($year,6)"], 2);
-    $jun=$format_number1;
+    $jun=$format_number1;}
   }
 }
 
 
 $sql = "select checkusage($year,7)";
 $result = mysqli_query($conn, $sql);
-
+$jul=0;
 if (mysqli_num_rows($result) > 0) {
   // output data of each row
   while($row = mysqli_fetch_assoc($result)) {
+  if($row["checkusage($year,7)"]==!0){
   $format_number1 = number_format($row["checkusage($year,7)"], 2);
-    $jul=$format_number1;
+    $jul=$format_number1;}
   }
 }
 
-
+$aug=0;
 $sql = "select checkusage($year,8)";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
   // output data of each row
   while($row = mysqli_fetch_assoc($result)) {
+  if($row["checkusage($year,8)"]==!0){
   $format_number1 = number_format($row["checkusage($year,8)"], 2);
-    $aug=$format_number1;
+    $aug=$format_number1;}
   }
 }
 
-
+$sep=0;
 $sql = "select checkusage($year,9)";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
   // output data of each row
   while($row = mysqli_fetch_assoc($result)) {
+  if($row["checkusage($year,9)"]==!0){
   $format_number1 = number_format($row["checkusage($year,9)"], 2);
-    $sep=$format_number1;
+    $sep=$format_number1;}
   }
 }
 
-
+$oct=0;
 $sql = "select checkusage($year,10)";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
   // output data of each row
   while($row = mysqli_fetch_assoc($result)) {
+  if($row["checkusage($year,10)"]==!0){
   $format_number1 = number_format($row["checkusage($year,10)"], 2);
-    $oct=$format_number1;
+    $oct=$format_number1;}
   }
 }
 
-
+$nov=0;
 $sql = "select checkusage($year,11)";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
   // output data of each row
   while($row = mysqli_fetch_assoc($result)) {
+  if($row["checkusage($year,11)"]==!0){
   $format_number1 = number_format($row["checkusage($year,11)"], 2);
-    $nov=$format_number1;
+    $nov=$format_number1;}
   }
 }
 
-
+$dec=0;
 $sql = "select checkusage($year,12)";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
   // output data of each row
   while($row = mysqli_fetch_assoc($result)) {
+  if($row["checkusage($year,12)"]==!0){
   $format_number1 = number_format($row["checkusage($year,12)"], 2);
-    $dec=$format_number1;
+    $dec=$format_number1;}
   }
 }
 
