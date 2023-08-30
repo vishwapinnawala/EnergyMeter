@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: fdb31.biz.nf
--- Generation Time: Aug 30, 2023 at 11:36 AM
+-- Generation Time: Aug 30, 2023 at 12:06 PM
 -- Server version: 5.7.40-log
 -- PHP Version: 8.1.22
 
@@ -20565,18 +20565,12 @@ INSERT INTO `users` (`email`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure for view `updatedconsumption` exported as a table
+-- Structure for view `updatedconsumption`
 --
 DROP TABLE IF EXISTS `updatedconsumption`;
-CREATE TABLE IF NOT EXISTS `updatedconsumption`(
-    `Timestamp` datetime DEFAULT NULL,
-    `Voltage` float NOT NULL,
-    `Current` float NOT NULL,
-    `Power` float NOT NULL,
-    `Energy` float NOT NULL,
-    `Frequency` float NOT NULL,
-    `PF` float NOT NULL
-);
+
+DROP VIEW IF EXISTS `updatedconsumption`;
+CREATE OR REPLACE VIEW `updatedconsumption`  AS SELECT (`consumption`.`Timestamp` + interval 330 minute) AS `Timestamp`, `consumption`.`Voltage` AS `Voltage`, `consumption`.`Current` AS `Current`, `consumption`.`Power` AS `Power`, `consumption`.`Energy` AS `Energy`, `consumption`.`Frequency` AS `Frequency`, `consumption`.`PF` AS `PF` FROM `consumption``consumption`  ;
 SET FOREIGN_KEY_CHECKS=1;
 COMMIT;
 
